@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+    id 'idea'
+    id 'eclipse'
+    id 'com.palantir.graal' version '0.9.0'
+}
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+application {
+    mainClass = 'net.ckozak.Main'
+}
+
+graal {
+    graalVersion '21.1.0'
+    javaVersion '11'
+    mainClass 'net.ckozak.Main'
+    outputName 'reproducer'
+}
